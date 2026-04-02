@@ -1094,7 +1094,12 @@ a {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.1rem;
+  }
+
+  .footer-grid > :nth-child(3) {
+    grid-column: 1 / -1;
   }
 
   .site-footer {
