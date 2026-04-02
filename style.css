@@ -892,17 +892,21 @@ a {
   }
 
   .showcase-left {
-    display: flex;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    grid-template-areas: "left stack right";
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 0.3rem;
   }
 
   .showcase-arrow.up {
+    grid-area: left;
     transform: none;
   }
 
   .showcase-arrow.down {
+    grid-area: right;
     transform: none;
   }
 
@@ -915,9 +919,9 @@ a {
   }
 
   .showcase-arrow {
-    width: 38px;
-    height: 38px;
-    flex: 0 0 38px;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
     font-size: 0;
   }
 
@@ -939,9 +943,10 @@ a {
   }
 
   .showcase-stack {
-    width: min(64vw, 280px);
-    max-width: 280px;
-    height: 260px;
+    grid-area: stack;
+    width: min(58vw, 220px);
+    max-width: 220px;
+    height: 210px;
     overflow: visible;
   }
 
@@ -952,38 +957,39 @@ a {
 
   .showcase-card.prev {
     top: 50%;
-    left: -20%;
-    transform: translateY(-50%) scale(0.84);
+    left: -16%;
+    transform: translateY(-50%) scale(0.82);
   }
 
   .showcase-card.next {
     top: 50%;
-    left: 20%;
-    transform: translateY(-50%) scale(0.84);
+    left: 16%;
+    transform: translateY(-50%) scale(0.82);
   }
 
   .showcase-card img {
-    height: 180px;
+    height: 140px;
   }
 
   .showcase-right {
-    padding: 0.85rem;
+    padding: 0.7rem 0.8rem;
     width: 100%;
   }
 
   .showcase-right h3 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.15;
   }
 
   .detail-block {
-    margin-top: 0.6rem;
-    font-size: 0.88rem;
-    line-height: 1.45;
+    margin-top: 0.45rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
   }
 
   .detail-price {
-    margin-top: 0.7rem;
-    font-size: 1.25rem;
+    margin-top: 0.45rem;
+    font-size: 1.1rem;
   }
 
   .cta-band {
