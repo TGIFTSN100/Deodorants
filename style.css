@@ -42,6 +42,21 @@ a {
   background: url('566.jpg') center/cover no-repeat;
   border-bottom: 1px solid rgba(201, 138, 52, 0.28);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+  position: relative;
+  isolation: isolate;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 6, 6, 0.64) 0%, rgba(10, 9, 8, 0.78) 100%);
+  z-index: 0;
+}
+
+.site-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .top-strip {
@@ -51,10 +66,11 @@ a {
 }
 
 .top-strip p {
-  color: #e0c79a;
+  color: #f7dca6;
   letter-spacing: 1.4px;
   font-size: 0.72rem;
   text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .brand-row {
@@ -65,10 +81,11 @@ a {
 
 .brand-mark {
   font-family: "Playfair Display", serif;
-  color: #f1cf8a;
+  color: #f8d99d;
   font-size: clamp(1.7rem, 3vw, 2.2rem);
   letter-spacing: 5px;
   font-weight: 700;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.36);
 }
 
 .menu-nav {
@@ -79,7 +96,7 @@ a {
   justify-content: center;
   gap: clamp(0.9rem, 3vw, 2.4rem);
   padding: 1rem 1rem 1.05rem;
-  background: rgba(12, 11, 10, 0.98);
+  background: rgba(10, 9, 8, 0.92);
   border-top: 1px solid rgba(201, 138, 52, 0.16);
   border-bottom: 1px solid rgba(201, 138, 52, 0.28);
   position: sticky;
