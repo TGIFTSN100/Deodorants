@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260402-1">
+  <link rel="stylesheet" href="style.css?v=20260402-2">
 </head>
 <body>
   <header class="site-header">
@@ -23,10 +23,11 @@
 
     <div class="brand-row">
       <div class="brand-mark">FreshAura</div>
+      <button class="menu-toggle home-menu-toggle" id="homeMenuToggle" type="button" aria-controls="homeNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <nav class="menu-nav" aria-label="Main navigation">
+  <nav class="menu-nav" id="homeNav" aria-label="Main navigation">
     <a href="#home">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="#collection">COLLECTION</a>
@@ -168,6 +169,26 @@
     const joinPopupOverlay = document.getElementById("joinPopupOverlay");
     const joinPopupClose = document.getElementById("joinPopupClose");
     const joinPopupTriggers = document.querySelectorAll(".join-popup-trigger");
+    const homeHeader = document.querySelector(".site-header");
+    const homeMenuToggle = document.getElementById("homeMenuToggle");
+    const homeNav = document.getElementById("homeNav");
+
+    function syncHomeHeaderState() {
+      const isMobile = window.matchMedia("(max-width: 600px)").matches;
+      const shouldCollapse = isMobile && window.scrollY > 24;
+
+      homeHeader.classList.toggle("is-collapsed", shouldCollapse);
+      homeMenuToggle.setAttribute("aria-expanded", String(homeNav.classList.contains("is-open")));
+
+      if (!isMobile) {
+        homeNav.classList.remove("is-open");
+        homeHeader.classList.remove("is-collapsed");
+        homeMenuToggle.setAttribute("aria-expanded", "false");
+      } else if (!shouldCollapse) {
+        homeNav.classList.remove("is-open");
+        homeMenuToggle.setAttribute("aria-expanded", "false");
+      }
+    }
 
     function openJoinPopup() {
       joinPopupOverlay.classList.add("active");
@@ -185,6 +206,18 @@
       trigger.addEventListener("click", openJoinPopup);
     });
 
+    homeMenuToggle.addEventListener("click", () => {
+      const isOpen = homeNav.classList.toggle("is-open");
+      homeMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    homeNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        homeNav.classList.remove("is-open");
+        homeMenuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
     joinPopupClose.addEventListener("click", closeJoinPopup);
 
     joinPopupOverlay.addEventListener("click", (event) => {
@@ -198,6 +231,10 @@
         closeJoinPopup();
       }
     });
+
+    window.addEventListener("scroll", syncHomeHeaderState, { passive: true });
+    window.addEventListener("resize", syncHomeHeaderState);
+    syncHomeHeaderState();
   </script>
 
 </body>
