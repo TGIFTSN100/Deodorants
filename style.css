@@ -936,6 +936,7 @@ a {
   .product-showcase {
     grid-template-columns: 1fr;
     gap: 0.95rem;
+    overflow-x: clip;
   }
 
   .showcase-left {
@@ -945,19 +946,21 @@ a {
     justify-content: center;
     gap: 0;
     width: 100%;
-    padding: 0;
+    max-width: 100%;
+    padding: 0 2.4rem;
+    margin: 0 auto;
   }
 
   .showcase-arrow.up {
     position: absolute;
-    left: 0;
+    left: 0.4rem;
     top: 50%;
     transform: translateY(-50%);
   }
 
   .showcase-arrow.down {
     position: absolute;
-    right: 0;
+    right: 0.4rem;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -996,9 +999,9 @@ a {
   }
 
   .showcase-stack {
-    width: min(100vw, 560px);
+    width: min(100%, 560px);
     max-width: 100%;
-    height: 360px;
+    height: 320px;
     overflow: hidden;
   }
 
@@ -1016,7 +1019,7 @@ a {
   }
 
   .showcase-card img {
-    height: 300px;
+    height: 260px;
   }
 
   .showcase-overlay {
