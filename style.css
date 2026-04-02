@@ -256,6 +256,38 @@ a {
   color: var(--muted);
 }
 
+.motion-ad {
+  margin: 1rem auto 0;
+  max-width: 760px;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 138, 52, 0.34);
+  background: linear-gradient(135deg, #fff5de 0%, #f3d08a 100%);
+  box-shadow: 0 10px 20px rgba(68, 43, 13, 0.10);
+}
+
+.motion-ad p {
+  margin: 0;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0.62rem 0;
+  font-weight: 800;
+  color: #1f2d2f;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  animation: adTicker 12s linear infinite;
+}
+
+@keyframes adTicker {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .product-grid {
   max-width: 1100px;
   margin: 0 auto;
