@@ -888,25 +888,21 @@ a {
   }
 
   .product-showcase {
-    gap: 1rem;
+    gap: 0.7rem;
   }
 
   .showcase-left {
-    display: grid;
-    grid-template-columns: 38px minmax(0, 1fr) 38px;
-    grid-template-areas: "left stack right";
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
+    justify-content: space-between;
+    gap: 0.35rem;
   }
 
   .showcase-arrow.up {
-    grid-area: left;
     transform: none;
   }
 
   .showcase-arrow.down {
-    grid-area: right;
     transform: none;
   }
 
@@ -919,9 +915,9 @@ a {
   }
 
   .showcase-arrow {
-    width: 34px;
-    height: 34px;
-    flex: 0 0 34px;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
     font-size: 0;
   }
 
@@ -943,53 +939,48 @@ a {
   }
 
   .showcase-stack {
-    grid-area: stack;
-    width: min(58vw, 220px);
-    max-width: 220px;
-    height: 210px;
-    overflow: visible;
+    width: min(64vw, 230px);
+    max-width: 230px;
+    height: 170px;
+    overflow: hidden;
   }
 
   .showcase-card.active {
-    top: 50%;
-    transform: translateY(-50%) scale(1);
+    top: 0;
+    transform: none;
   }
 
   .showcase-card.prev {
-    top: 50%;
-    left: -16%;
-    transform: translateY(-50%) scale(0.82);
+    display: none;
   }
 
   .showcase-card.next {
-    top: 50%;
-    left: 16%;
-    transform: translateY(-50%) scale(0.82);
+    display: none;
   }
 
   .showcase-card img {
-    height: 140px;
+    height: 120px;
   }
 
   .showcase-right {
-    padding: 0.7rem 0.8rem;
+    padding: 0.65rem 0.75rem;
     width: 100%;
   }
 
   .showcase-right h3 {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     line-height: 1.15;
   }
 
   .detail-block {
-    margin-top: 0.45rem;
-    font-size: 0.8rem;
-    line-height: 1.3;
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+    line-height: 1.22;
   }
 
   .detail-price {
-    margin-top: 0.45rem;
-    font-size: 1.1rem;
+    margin-top: 0.35rem;
+    font-size: 1rem;
   }
 
   .cta-band {
