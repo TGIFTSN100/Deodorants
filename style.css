@@ -892,36 +892,56 @@ a {
   }
 
   .showcase-left {
-    display: grid;
-    grid-template-columns: 42px minmax(0, 1fr) 42px;
-    grid-template-areas: "up stack down";
+    display: flex;
     align-items: center;
-    gap: 0.55rem;
+    justify-content: center;
+    gap: 0.4rem;
   }
 
   .showcase-arrow.up {
-    grid-area: up;
-    transform: rotate(-90deg);
+    transform: none;
   }
 
   .showcase-arrow.down {
-    grid-area: down;
-    transform: rotate(90deg);
+    transform: none;
   }
 
   .showcase-arrow.up:hover {
-    transform: rotate(-90deg) scale(1.05);
+    transform: scale(1.05);
   }
 
   .showcase-arrow.down:hover {
-    transform: rotate(90deg) scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .showcase-arrow {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    font-size: 0;
+  }
+
+  .showcase-arrow.up::before,
+  .showcase-arrow.down::before {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #17343b;
+  }
+
+  .showcase-arrow.up::before {
+    content: "◀";
+  }
+
+  .showcase-arrow.down::before {
+    content: "▶";
   }
 
   .showcase-stack {
-    grid-area: stack;
-    width: 100%;
-    max-width: 100%;
-    height: 330px;
+    width: min(64vw, 280px);
+    max-width: 280px;
+    height: 260px;
     overflow: visible;
   }
 
@@ -932,23 +952,38 @@ a {
 
   .showcase-card.prev {
     top: 50%;
-    left: -24%;
+    left: -20%;
     transform: translateY(-50%) scale(0.84);
   }
 
   .showcase-card.next {
     top: 50%;
-    left: 24%;
+    left: 20%;
     transform: translateY(-50%) scale(0.84);
   }
 
   .showcase-card img {
-    height: 250px;
+    height: 180px;
   }
 
   .showcase-right {
-    padding: 1rem;
+    padding: 0.85rem;
     width: 100%;
+  }
+
+  .showcase-right h3 {
+    font-size: 1.25rem;
+  }
+
+  .detail-block {
+    margin-top: 0.6rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .detail-price {
+    margin-top: 0.7rem;
+    font-size: 1.25rem;
   }
 
   .cta-band {
