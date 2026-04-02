@@ -896,14 +896,10 @@ a {
   .brand-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     padding: 0.9rem 1rem;
-    text-align: left;
-  }
-
-  .site-header:not(.is-collapsed) .brand-row {
-    justify-content: center;
+    text-align: center;
   }
 
   .site-header.is-collapsed .top-strip {
@@ -927,13 +923,11 @@ a {
   }
 
   .home-menu-toggle {
-    display: inline-flex;
-    opacity: 0;
-    transform: scale(0.92);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: none;
   }
 
   .site-header.is-collapsed .home-menu-toggle {
+    display: inline-flex;
     opacity: 1;
     transform: scale(1);
   }
