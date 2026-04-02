@@ -6,7 +6,7 @@ const products = [
     benefits: "Controls odor, keeps skin feeling dry, and gives all-day freshness.",
     duration: "Up to 24 hours",
     price: "$8.50",
-    image: "https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/inuka-fresh-deodorant.jpg"
   },
   {
     name: "Avon Floral Perfume",
@@ -15,7 +15,7 @@ const products = [
     benefits: "Soft floral signature scent ideal for work and daily wear.",
     duration: "6 to 8 hours",
     price: "$18.00",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/avon-floral-perfume.jpg"
   },
   {
     name: "Avon Black Suede",
@@ -24,7 +24,7 @@ const products = [
     benefits: "Adds a bold, warm scent profile suitable for evening occasions.",
     duration: "8 to 10 hours",
     price: "$22.00",
-    image: "https://images.unsplash.com/photo-1595425964072-6e28f9f82955?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/avon-black-suede.jpg"
   },
   {
     name: "Inuka Cool Body Mist",
@@ -33,7 +33,7 @@ const products = [
     benefits: "Quick refresh, light fragrance layer, and comfortable daytime feel.",
     duration: "4 to 6 hours",
     price: "$10.00",
-    image: "https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/inuka-cool-body-mist.jpg"
   },
   {
     name: "Men Sport Deodorant",
@@ -42,7 +42,7 @@ const products = [
     benefits: "High-performance odor defense for active schedules.",
     duration: "Up to 24 hours",
     price: "$9.00",
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59a16?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/sport-shield-deodorant.jpg"
   },
   {
     name: "Women Elegance Perfume",
@@ -51,7 +51,7 @@ const products = [
     benefits: "Elegant scent character that feels polished and feminine.",
     duration: "7 to 9 hours",
     price: "$24.00",
-    image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/women-elegance-perfume.jpg"
   },
   {
     name: "Classic Oud Perfume",
@@ -60,7 +60,7 @@ const products = [
     benefits: "Deep woody profile that creates a luxury statement.",
     duration: "10 to 12 hours",
     price: "$28.00",
-    image: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/classic-oud-perfume.jpg"
   },
   {
     name: "Citrus Burst Body Mist",
@@ -69,7 +69,7 @@ const products = [
     benefits: "Energizing citrus uplift with a clean, bright finish.",
     duration: "4 to 5 hours",
     price: "$12.00",
-    image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/citrus-burst-body-mist.jpg"
   },
   {
     name: "Midnight Velvet Perfume",
@@ -78,7 +78,7 @@ const products = [
     benefits: "Sensual long-wear fragrance with smooth evening depth.",
     duration: "9 to 11 hours",
     price: "$30.00",
-    image: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=900&q=80"
+    image: "images/products/midnight-velvet-perfume.jpg"
   }
 ];
 
