@@ -17,10 +17,11 @@
 
     <div class="brand-row">
       <div class="brand-mark">FreshAura</div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <nav class="menu-nav" aria-label="Main navigation">
+  <nav class="menu-nav" id="siteNav" aria-label="Main navigation">
     <a href="index.html#home">HOME</a>
     <a href="index.html#about">ABOUT</a>
     <a href="products.html">COLLECTION</a>
@@ -40,7 +41,7 @@
 
       <div class="product-showcase" id="product-showcase">
         <div class="showcase-left">
-          <button class="showcase-arrow up" id="showcase-up" aria-label="Previous product">&#9650;</button>
+          <button class="showcase-arrow up" id="showcase-up" aria-label="Previous product">&#9664;</button>
 
           <div class="showcase-stack">
             <article class="showcase-card prev" id="card-prev" aria-hidden="true"></article>
@@ -48,7 +49,7 @@
             <article class="showcase-card next" id="card-next" aria-hidden="true"></article>
           </div>
 
-          <button class="showcase-arrow down" id="showcase-down" aria-label="Next product">&#9660;</button>
+          <button class="showcase-arrow down" id="showcase-down" aria-label="Next product">&#9654;</button>
         </div>
 
         <aside class="showcase-right" id="product-details" aria-live="polite">

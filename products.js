@@ -68,6 +68,8 @@ const detailUsage = document.getElementById("detail-usage");
 const detailBenefits = document.getElementById("detail-benefits");
 const detailDuration = document.getElementById("detail-duration");
 const detailPrice = document.getElementById("detail-price");
+const menuToggle = document.getElementById("menuToggle");
+const siteNav = document.getElementById("siteNav");
 
 let currentIndex = 0;
 let isTransitioning = false;
@@ -162,3 +164,17 @@ document.addEventListener("keydown", (event) => {
 
 render(currentIndex);
 animateDetails();
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
