@@ -71,6 +71,16 @@ a {
   pointer-events: none;
 }
 
+.home-top-header {
+  background:
+    linear-gradient(180deg, rgba(7, 6, 6, 0.34) 0%, rgba(10, 9, 8, 0.5) 100%),
+    url("./566.jpg") center/cover no-repeat;
+}
+
+.home-top-header::before {
+  background: linear-gradient(180deg, rgba(7, 6, 6, 0.6) 0%, rgba(10, 9, 8, 0.72) 100%);
+}
+
 .top-strip {
   border-bottom: 1px solid rgba(201, 138, 52, 0.18);
   text-align: center;
@@ -749,6 +759,20 @@ a {
 .footer-bottom p {
   color: #c4cbce;
   font-size: 0.9rem;
+}
+
+.visitor-counter {
+  margin-top: 0.35rem;
+  color: #f0cf8a;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.visitor-counter-icon {
+  line-height: 1;
 }
 
 .about-page {
